@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Academy: Нёрдс</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="main-header">
+				<nav class="main-navigation">
+					<a href="index.html" class="main-logo">
+						<img src="img/nerds-logo.svg" alt="Logo Nerds">           
+					</a>
+					<ul class="navigation-site">
+						<li><a href="#">СТУДИЯ</a></li>
+						<li><a href="#">КЛИЕНТЫ</a></li>
+						<li><a href="#">МАГАЗИН</a></li>
+						<li><a href="#">КОНТАКТЫ</a></li>
+					</ul>
+					<ul class="navigation-user">
+						<li class="navigation-login"><a href="#">КОРЗИНА</a></li>
+					</ul>
+				</nav>
+				<h2>Магазин готовых шаблонов</h2>
+			</div>
+			<main class="container-main">
+				<div class="filters">
+					<form class="filters-form" method="post" action="https://echo.htmlacademy.ru">
+						<fieldset class="filters-cost">
+							<legend class="filters-item">СТОИМОСТЬ:</legend>
+							<div class="filters-range">
+								<div class="filters-range-controls">
+									<div class="filters-scale">
+										<div class="filters-bar"></div>
+									</div>
+									<div class="range-toggle range-toggle-min"></div>
+									<div class="range-toggle range-toggle-max"></div>
+								</div>
+								<div class="price-controls">
+									<label class="min-price">
+										от
+										<input type="text" name="min-price" value="0">
+									</label>
+									<label class="max-price">
+										до
+										<input type="text" name="max-price" value="15000">
+									</label>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="filters-grid">
+							<legend class="filters-item">СЕТКА:</legend>
+							<div class="filters-grid-list">
+								<ul>
+									<li class="grid-list">
+										<input class="filters-radio" id="filters-adaptive" type="radio" name="filters-selection" value="Адаптивная" checked>
+										<label for="filters-adaptive">Адаптивная</label>
+									</li>
+									<li class="grid-list">
+										<input class="filters-radio" id="filters-fixed" type="radio" name="filters-selection" value="Фиксированная">
+										<label for="filters-fixed">Фиксированная</label>
+									</li>
+									<li class="grid-list">
+										<input class="filters-radio" id="filters-rubber" type="radio" name="filters-selection" value="Резиновая">
+										<label for="filters-rubber">Резиновая</label>
+									</li>
+								</ul>
+							</div>							
+						</fieldset>
+						<fieldset class="filters-feature">
+							<legend class="filters-item">ОСОБЕННОСТИ:</legend>
+							<div class="filters-feature-list">
+								<ul>
+									<li class="feature-list">
+										<input class="filters-checkbox" id="filters-slider" type="checkbox" name="filters-slider" value="Слайдер" checked>
+										<label for="filters-slider">Слайдер</label>
+									</li>
+									<li class="feature-list">
+										<input class="filters-checkbox" id="filters-advantage-block" type="checked" name="filters-advantage-block" value="Блок преимуществ">
+										<label for="filters-advantage-block">Блок преимуществ</label>
+									</li>
+									<li class="feature-list">
+										<input class="filters-checkbox" id="filters-news" type="checked" name="filters-news" value="Новости" checked>
+										<label for="filters-news">Новости</label>
+									</li>
+									<li class="feature-list">
+										<input class="filters-checkbox" id="filters-gallery" type="checked" name="filters-gallery" value="Галерея">
+										<label for="filters-gallery">Галерея</label>
+									</li>
+									<li class="feature-list">
+										<input class="filters-checkbox" id="filters-basket" type="checked" name="filters-basket" value="Корзина">
+										<label for="filters-basket">Корзина</label>
+									</li>
+								</ul>
+							</div>
+						</fieldset>
+						<button class="btn btn-filters">ПОКАЗАТЬ</button>
+					</form>
+				</div>
+				<div class="filters-cort">
+					<form class="filters-cort-form">
+						<legend class="filters-cort-list">СОРТИРОВАТЬ:</legend>
+						<ul>
+							<li class="sort-list">
+								<button>ПО ЦЕНЕ</button>
+							</li>
+							<li class="sort-list">
+								<button>ПО ТИПУ</button>
+							</li>
+							<li class="sort-list">
+								<button>ПО НАЗВАНИЮ</button>
+							</li>
+							<li class="sort-list sort-list-borrom">
+								<button></button>
+							</li>
+							<li class="sort-list sort-list-top">
+								<button></button>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="catalog">
+					<div class="catalog-card">
+						<div class="catalog-image">
+							<div class="catalog-cap-black"></div>
+							<img src="img/img-sedona-jpg.png">
+							<div class="hidden-block">
+								<h3>SEDONA</h3>
+								<span>Информационный сайт для туристов</span>
+								<a class="btn btn-hidden" href="#">9 900 РУБ.</a>
+							</div>
+						</div>
+						<div class="catalog-image">
+							<div class="catalog-cap-white"></div>
+							<img src="img/img-pink-jpg.png">
+
+						</div>
+						<div class="catalog-image">
+							<img src="img/img-barbershop-jpg.png">
+						</div>
+						<div class="catalog-image">
+							<img src="img/img-mishka-jpg.png">
+						</div>
+						<div class="catalog-image">
+							<img src="img/img-aplus-jpg.png">
+						</div>
+						<div class="catalog-image">
+							<img src="img/img-kvast-jpg.png">
+						</div>
+					</div>
+				</div>
+
+			</main>
+		</div>
+	</body>
+</html>
