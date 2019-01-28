@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Нёрдс</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
@@ -10,7 +11,7 @@
 			<div class="main-header">
 				<nav class="main-navigation">
 					<a href="#" class="main-logo">
-						<img src="img/nerds-logo.svg" alt="Logo Nerds">           
+						<img src="img/nerds-logo.svg" alt="Logo Nerds">       
 					</a>
 					<ul class="navigation-site">
 						<li><a class="underline" href="#">СТУДИЯ</a></li>
@@ -22,8 +23,16 @@
 						<li class="navigation-login"><a class="underline" href="#">КОРЗИНА</a></li>
 					</ul>
 				</nav>
+				<input class="visually-hidden" type="radio" id="product-1" name="toggle" checked="">
+				<input class="visually-hidden" type="radio" id="product-2" name="toggle">
+				<input class="visually-hidden" type="radio" id="product-3" name="toggle">
+				<div class="sliders-controls">
+					<label class="sliders-controls-item sliders-controls-item-1" for="product-1">Первый слайд</label>
+					<label class="sliders-controls-item sliders-controls-item-2" for="product-2">Второй слайд</label>
+					<label class="sliders-controls-item sliders-controls-item-3" for="product-3">Третий слайд</label>
+				</div>
 				<div class="sliders">
-					<div class="sliders-main">
+					<div class="sliders-hidden">
 						<div class="sliders-slogan">
 							Долго, дорого, скрупулезно.
 						</div>
@@ -33,9 +42,6 @@
 						<a href="#" class="btn btn-header underline">
 							УЗНАТЬ БОЛЬШЕ
 						</a>
-						<div class="sliders-photo">
-							<img src="img/slide-1.png">
-						</div>  
 					</div>
 					<div class="sliders-hidden">
 						<div class="sliders-slogan">
@@ -47,9 +53,6 @@
 						<a href="#" class="btn btn-header underline">
 							УЗНАТЬ БОЛЬШЕ
 						</a>
-						<div class="sliders-photo">
-							<img src="img/slide-2.png">
-						</div>  
 					</div>
 					<div class="sliders-hidden">
 						<div class="sliders-slogan">
@@ -61,9 +64,6 @@
 						<a href="#" class="btn btn-header underline">
 							УЗНАТЬ БОЛЬШЕ
 						</a>
-						<div class="sliders-photo">
-							<img src="img/slide-3.png">
-						</div>  
 					</div>
 				</div>
 			</div>
@@ -77,7 +77,7 @@
 						<span>
 							Мир никогда не будет прежним после того как увидит ваш сайт!
 						</span>
-						<a href="#" class="btn"></a>
+						<a href="#" class="btn btn-red">ЗАКАЗАТЬ</a>
 					</div>
 					<div class="advantages-block">
 						<div class="advantages-pictures">
@@ -87,7 +87,7 @@
 						<span>
 							Покорите топ-10 приложений в AppStore и Google Play
 						</span>
-						<a href="#" class="btn"></a>
+						<a href="#" class="btn btn-green">ЗАКАЗАТЬ</a>
 					</div>
 					<div class="advantages-block">
 						<div class="advantages-pictures">
@@ -97,7 +97,7 @@
 						<span>
 							Вы даже не подозреваете, насколько вы изумительны!
 						</span>
-						<a href="#" class="btn"></a>
+						<a href="#" class="btn btn-yellow">ЗАКАЗАТЬ</a>
 					</div>
 				</div>
 				<section class="feature-studio">
@@ -108,34 +108,33 @@
 						<span>
 							Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
 						</span>
-						<div>Выполняем заказы на разработку:
-							<div>
-								Веб-сайтов любой сложности
-							</div>
-							<div>
-								Мобильных приложений для iOS и Android
-							</div>
-							<div>
-								Слайдшоу и видео для корпоративных презентаций
-							</div>
+						<div class="possible-development">
+							<span>ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</span>
+							<ul>
+								<li>Веб-сайтов любой сложности</li>
+								<li>Мобильных приложений для iOS и Android</li>
+								<li>Слайдшоу и видео для корпоративных презентаций</li>
+							</ul>
 						</div>
 					</div>
 					<div class="accountability-studio">
 						<img src="img/nerds-illustration.png">
 						<div class="opening-date">
-							с 2004 года Любим точность во всем:
+							С 2004 ГОДА ЛЮБИМ ТОЧНОСТЬ ВО ВСЕМ:
 						</div>
-						<div class="accountability-percent">
-							<span class="percent">146</span>
-							<span>Уровень самоотдачи</span>
-						</div>
-						<div class="accountability-percent">
-							<span class="percent">100</span>
-							<span>Соблюдение сроков</span>
-						</div>
-						<div class="accountability-percent">
-							<span class="percent">50</span>
-							<span>Минимальная предоплата</span>
+						<div class="accountability-flex">
+							<div class="accountability-percent">
+								<span class="percent">146</span>
+								<span>Уровень самоотдачи</span>
+							</div>
+							<div class="accountability-percent">
+								<span class="percent">100</span>
+								<span>Соблюдение сроков</span>
+							</div>
+							<div class="accountability-percent">
+								<span class="percent">50</span>
+								<span>Минимальная предоплата</span>
+							</div>
 						</div>
 					</div>
 				</section>
