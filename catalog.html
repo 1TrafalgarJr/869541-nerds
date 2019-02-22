@@ -10,19 +10,19 @@
 			<div class="main-header main-header-catalog">
 				<nav class="main-navigation">
 					<a href="index.html" class="main-logo">
-						<img src="img/nerds-logo.svg" alt="Logo Nerds">           
+						<img src="img/nerds-logo.svg" alt="Logo Nerds">       
 					</a>
 					<ul class="navigation-site">
-						<li><a href="#">СТУДИЯ</a></li>
-						<li><a href="#">КЛИЕНТЫ</a></li>
-						<li><a href="#">МАГАЗИН</a></li>
-						<li><a href="#">КОНТАКТЫ</a></li>
+						<li><a class="underline" href="#">СТУДИЯ</a></li>
+						<li><a class="underline" href="#">КЛИЕНТЫ</a></li>
+						<li><a class="underline underline-active" href="catalog.html">МАГАЗИН</a></li>
+						<li><a class="underline" href="#">КОНТАКТЫ</a></li>
 					</ul>
 					<ul class="navigation-user">
-						<li class="navigation-login"><a href="#">КОРЗИНА</a></li>
+						<li class="navigation-login navigation-login-active"><a class="basket underline underline-active" href="#">КОРЗИНА</a></li>
 					</ul>
 				</nav>
-				<h2>Магазин готовых шаблонов</h2>
+				<h2 class="main-catalog">Магазин готовых шаблонов</h2>
 			</div>
 			<main class="container-main">
 				<div class="filters">
@@ -77,19 +77,19 @@
 										<label for="filters-slider">Слайдер</label>
 									</li>
 									<li class="feature-list">
-										<input class="filters-checkbox" id="filters-advantage-block" type="checked" name="filters-advantage-block" value="Блок преимуществ">
+										<input class="filters-checkbox" id="filters-advantage-block" type="checkbox" name="filters-advantage-block" value="Блок преимуществ">
 										<label for="filters-advantage-block">Блок преимуществ</label>
 									</li>
 									<li class="feature-list">
-										<input class="filters-checkbox" id="filters-news" type="checked" name="filters-news" value="Новости" checked>
+										<input class="filters-checkbox" id="filters-news" type="checkbox" name="filters-news" value="Новости" checked>
 										<label for="filters-news">Новости</label>
 									</li>
 									<li class="feature-list">
-										<input class="filters-checkbox" id="filters-gallery" type="checked" name="filters-gallery" value="Галерея">
+										<input class="filters-checkbox" id="filters-gallery" type="checkbox" name="filters-gallery" value="Галерея">
 										<label for="filters-gallery">Галерея</label>
 									</li>
 									<li class="feature-list">
-										<input class="filters-checkbox" id="filters-basket" type="checked" name="filters-basket" value="Корзина">
+										<input class="filters-checkbox" id="filters-basket" type="checkbox" name="filters-basket" value="Корзина">
 										<label for="filters-basket">Корзина</label>
 									</li>
 								</ul>
@@ -98,130 +98,205 @@
 						<button class="btn btn-filters">ПОКАЗАТЬ</button>
 					</form>
 				</div>
-				<div class="filters-cort">
-					<form class="filters-cort-form">
-						<legend class="filters-cort-list">СОРТИРОВАТЬ:</legend>
-						<ul>
-							<li class="sort-list">
-								<button>ПО ЦЕНЕ</button>
-							</li>
-							<li class="sort-list">
-								<button>ПО ТИПУ</button>
-							</li>
-							<li class="sort-list">
-								<button>ПО НАЗВАНИЮ</button>
-							</li>
-							<li class="sort-list sort-list-borrom">
-								<button></button>
-							</li>
-							<li class="sort-list sort-list-top">
-								<button></button>
-							</li>
-						</ul>
-					</form>
-				</div>
-				<div class="catalog">
-					<div class="catalog-card">
-						<div class="catalog-image">
-							<div class="catalog-cap-black"></div>
-							<img src="img/img-sedona-jpg.png">
-							<div class="hidden-block">
-								<h3>SEDONA</h3>
-								<span>Информационный сайт для туристов</span>
-								<a class="btn btn-hidden" href="#">9 900 РУБ.</a>
+				<div class="page-catalog">
+					<div class="filters-cort">
+						<form class="filters-cort-form">
+							<legend class="filters-cort-list">СОРТИРОВАТЬ:</legend>
+							<div class="filters-sort">
+								<div class="sort-list">
+									<a>ПО ЦЕНЕ</a>
+								</div>
+								<div class="sort-list">
+									<a>ПО ТИПУ</a>
+								</div>
+								<div class="sort-list">
+									<a>ПО НАЗВАНИЮ</a>
+								</div>
+								<div class="sort-list sort-list-bottom">
+									<a></a>
+								</div>
+								<div class="sort-list sort-list-top">
+									<a></a>
+								</div>
 							</div>
-						</div>
-						<div class="catalog-image">
-							<div class="catalog-cap-white"></div>
-							<img src="img/img-pink-jpg.png">
-							<div class="hidden-block">
-								<h3>PINK APP</h3>
-								<span>Продуктовый лендинг приложения для iOS и Android</span>
-								<a class="btn btn-hidden" href="#">9 900 РУБ.</a>
+						</form>
+					</div>
+					<div class="catalog">
+						<div class="catalog-card">
+							<div class="catalog-image">
+								<img src="img/img-sedona-jpg.png">
+								<div class="hidden-block">
+									<div class="hidden-block-hover">
+										<h3>SEDONA</h3>
+										<p>Информационный сайт для туристов</p>
+										<a class="btn btn-red btn-hidden" href="#">9 900 РУБ.</a>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="catalog-image">
-							<div class="catalog-cap-white"></div>
-							<img src="img/img-barbershop-jpg.png">
-							<div class="hidden-block">
-								<h3>BARBERSHOP</h3>
-								<span>Сайт салона красоты. Для мужчин, да.</span>
-								<a class="btn btn-hidden" href="#">9 900 РУБ.</a>
+							<div class="catalog-image">
+								<img src="img/img-pink-jpg.png">
+								<div class="hidden-block">
+									<div class="hidden-block-hover">
+										<h3>PINK APP</h3>
+										<p>Продуктовый лендинг приложения для iOS и Android</p>
+										<a class="btn btn-red btn-hidden" href="#">9 900 РУБ.</a>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="catalog-image">
-							<div class="catalog-cap-white"></div>
-							<img src="img/img-mishka-jpg.png">
-							<div class="hidden-block">
-								<h3>MISHKA</h3>
-								<span>Интернет-магазин вязаных игрушек</span>
-								<a class="btn btn-hidden" href="#">9 900 РУБ.</a>
+							<div class="catalog-image">
+								<img src="img/img-barbershop-jpg.png">
+								<div class="hidden-block">
+									<div class="hidden-block-hover">
+										<h3>BARBERSHOP</h3>
+										<p>Сайт салона красоты. Для мужчин, да.</p>
+										<a class="btn btn-red btn-hidden" href="#">9 900 РУБ.</a>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="catalog-image">
-							<div class="catalog-cap-white"></div>
-							<img src="img/img-aplus-jpg.png">
-							<div class="hidden-block">
-								<h3>A PLUS</h3>
-								<span>Лендинг курсов повышения квалификации</span>
-								<a class="btn btn-hidden" href="#">9 900 РУБ.</a>
+							<div class="catalog-image">
+								<img src="img/img-mishka-jpg.png">
+								<div class="hidden-block">
+									<div class="hidden-block-hover">
+										<h3>MISHKA</h3>
+										<p>Интернет-магазин вязаных игрушек</p>
+										<a class="btn btn-red btn-hidden" href="#">9 900 РУБ.</a>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="catalog-image">
-							<div class="catalog-cap-white"></div>
-							<img src="img/img-kvast-jpg.png">
-							<div class="hidden-block">
-								<h3>КВАСТ</h3>
-								<span>Промо-сайт производителя крафтового кваса</span>
-								<a class="btn btn-hidden" href="#">9 900 РУБ.</a>
+							<div class="catalog-image">
+								<img src="img/img-aplus-jpg.png">
+								<div class="hidden-block">
+									<div class="hidden-block-hover">
+										<h3>A PLUS</h3>
+										<p>Лендинг курсов повышения квалификации</p>
+										<a class="btn btn-red btn-hidden" href="#">9 900 РУБ.</a>
+									</div>
+								</div>
+							</div>
+							<div class="catalog-image">
+								<img src="img/img-kvast-jpg.png">
+								<div class="hidden-block">
+									<div class="hidden-block-hover">
+										<h3>КВАСТ</h3>
+										<p>Промо-сайт производителя крафтового кваса</p>
+										<a class="btn btn-red btn-hidden" href="#">9 900 РУБ.</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="paginations">
-					<div class="first-page">
-						<a href="#">1</a>
-					</div>
-					<div class="paginations-numbers">
-						<a href="">2</a>
-					</div>
-					<div class="paginations-numbers">
-						<a href="">3</a>
-					</div>
-					<div class="paginations-numbers-btns">
-						<a href="">СЛЕДУЮЩАЯ</a>
+					<div class="paginations">
+						<div class="first-page">
+							<a href="#">1</a>
+						</div>
+						<div class="paginations-numbers">
+							<a href="#">2</a>
+						</div>
+						<div class="paginations-numbers">
+							<a href="#">3</a>
+						</div>
+						<div class="paginations-numbers-btns">
+							<a class="btn btn-filters btn-paginations" href="#">СЛЕДУЮЩАЯ</a>
+						</div>
 					</div>
 				</div>
 			</main>
 			<footer>
 				<div class="map">
-					<div class="map-img">
-						<img src="img/map.png">
-						<div class="map-marker">
-							<img src="img/map-marker-png.png">
-						</div>
+					<div class="map-marker">
+						<img src="img/map-marker-png.png">
 					</div>
 					<div class="map-form">
 						<div class="map-information">
-							<span>NЁRDS DESIGN STUDIO</span>
-							<span>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-							<span>тел. +7 (812) 275-75-75</span>
+							<p class="company-name">NЁRDS DESIGN STUDIO</p><br>
+							<p class="company-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p><br>
+							<p class="company-telephone">тел. +7 (812) 275-75-75</p><br>
 						</div>
-						<a href="#">НАПИШИТЕ НАМ</a>
+						<a class="btn btn-map" href="#">НАПИШИТЕ НАМ</a>
 					</div>
 				</div>
-				<div>
+				<div class="modal modal-login">
+					<h3>Напишите нам</h3>
+					<button class="popup-close" type="button" title="Закрыть">Закрыть</button>
+					<form class="login-form" method="post" action="https://echo.htmlacademy.ru">
+						<label class="hidden-top" for="user-name">Ваше имя:</label>
+						<input class="form-control" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+						<label class="hidden-top" for="user-email">Ваш e-mail:</label>
+						<input class="form-control" id="user-email" type="email" name="user-email" placeholder="email@example.com">
+						<label class="hidden-top" for="feedback-text">В свободной форме</label>
+						<input class="form-control" id="feedback-text" type="text" name="feedback-text" placeholder="Текст письма:">
+						<button class="btn btn-red btn-hidden">ОТПРАВИТЬ</button>
+					</form>
+				</div>
+				<div class="social">
 					<div class="social-networks">
 						<div><a href="#"><img src="img/vk-icon.png"></a></div>
 						<div><a href="#"><img src="img/fb-icon.png"></a></div>
 						<div><a href="#"><img src="img/insta-icon.png"></a></div>
 					</div>
 					<div class="slogan">
-						<span>Давайте дружить, это выгодно!</span>
-						<span>Скидка 10% для друзей из социальных сетей.</span>
+						<p>Давайте дружить, это выгодно!</p><br>
+						<p>Скидка 10% для друзей из социальных сетей.</p>
 					</div>
 				</div>
 			</footer>
 		</div>
+		<script>
+			var link = document.querySelector(".btn-map");
+
+			var popup = document.querySelector(".modal-login");
+			var close = popup.querySelector(".popup-close");
+
+			var form = popup.querySelector("form");
+			var login = popup.querySelector("[name=user-name]");
+			var email = popup.querySelector("[name=user-email]");
+			var text = popup.querySelector("[name=feedback-text]");
+
+			var isStorageSupport = true;
+			var storage = "";
+
+			try {
+				storage = localStorage.getItem("login");
+			}	catch (err) {
+				isStorageSupport = false;
+			}
+
+			link.addEventListener("click", function (evt) {
+				evt.preventDefault();
+				popup.classList.add("modal-show");
+
+				if (storage) {
+					login.value = storage;
+					email.focus();
+				}	else {
+					login.focus();
+				}
+			});
+
+			close.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				popup.classList.remove("modal-show");
+			});
+
+			form.addEventListener("submit", function(evt) {
+				if (!login.value || !email.value || !text.value) {
+					evt.preventDefault();
+					console.log("Нужно ввести логин и пароль");
+				} else {
+					if (isStorageSupport) {
+						localStorage.setItem("login", login.value);
+					}
+				}
+			});
+
+			window.addEventListener("keydown", function (evt) {
+				if (evt.keyCode === 27) {
+					evt.preventDefault();
+					if (popup.classList.contains ("modal-show")) {
+						popup.classList.remove("modal-show");
+					}
+				}
+			});
+		</script>
 	</body>
 </html>

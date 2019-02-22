@@ -20,7 +20,7 @@
 						<li><a class="underline" href="#">КОНТАКТЫ</a></li>
 					</ul>
 					<ul class="navigation-user">
-						<li class="navigation-login"><a class="underline" href="#">КОРЗИНА</a></li>
+						<li class="navigation-login"><a class="basket underline" href="#">КОРЗИНА</a></li>
 					</ul>
 				</nav>
 				<input class="visually-hidden" type="radio" id="product-1" name="toggle" checked="">
@@ -67,7 +67,7 @@
 					</div>
 				</div>
 			</div>
-			<main class="container-main">
+			<main class="containers-main">
 				<div class="advantages">
 					<div class="advantages-block">
 						<div class="advantages-pictures">
@@ -154,31 +154,101 @@
 				</div>
 			</main>
 			<footer>
-			<div class="map">
-				<div class="map-marker">
-					<img src="img/map-marker-png.png">
-				</div>
-				<div class="map-form">
-					<div class="map-information">
-						<p class="company-name">NЁRDS DESIGN STUDIO</p><br>
-						<p class="company-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p><br>
-						<p class="company-telephone">тел. +7 (812) 275-75-75</p><br>
+				<div class="map">
+					<div class="map-marker">
+						<img src="img/map-marker-png.png">
 					</div>
-					<a class="btn btn-map" href="#">НАПИШИТЕ НАМ</a>
+					<div class="map-form">
+						<div class="map-information">
+							<p class="company-name">NЁRDS DESIGN STUDIO</p><br>
+							<p class="company-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p><br>
+							<p class="company-telephone">тел. +7 (812) 275-75-75</p><br>
+						</div>
+						<a class="btn btn-map" href="#">НАПИШИТЕ НАМ</a>
+					</div>
 				</div>
-			</div>
-			<div class="social">
-				<div class="social-networks">
-					<div><a href="#"><img src="img/vk-icon.png"></a></div>
-					<div><a href="#"><img src="img/fb-icon.png"></a></div>
-					<div><a href="#"><img src="img/insta-icon.png"></a></div>
+				<div class="modal modal-login">
+					<h3>Напишите нам</h3>
+					<button class="popup-close" type="button" title="Закрыть">Закрыть</button>
+					<form class="login-form" method="post" action="https://echo.htmlacademy.ru">
+						<label class="hidden-top" for="user-name">Ваше имя:</label>
+						<input class="form-control" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+						<label class="hidden-top" for="user-email">Ваш e-mail:</label>
+						<input class="form-control" id="user-email" type="email" name="user-email" placeholder="email@example.com">
+						<label class="hidden-top" for="feedback-text">В свободной форме</label>
+						<input class="form-control" id="feedback-text" type="text" name="feedback-text" placeholder="Текст письма:">
+						<button class="btn btn-red btn-hidden">ОТПРАВИТЬ</button>
+					</form>
 				</div>
-				<div class="slogan">
-					<p>Давайте дружить, это выгодно!</p><br>
-					<p>Скидка 10% для друзей из социальных сетей.</p>
+				<div class="social">
+					<div class="social-networks">
+						<div><a href="#"><img src="img/vk-icon.png"></a></div>
+						<div><a href="#"><img src="img/fb-icon.png"></a></div>
+						<div><a href="#"><img src="img/insta-icon.png"></a></div>
+					</div>
+					<div class="slogan">
+						<p>Давайте дружить, это выгодно!</p><br>
+						<p>Скидка 10% для друзей из социальных сетей.</p>
+					</div>
 				</div>
-			</div>
 			</footer>
 		</div>
+		<script>
+			var link = document.querySelector(".btn-map");
+
+			var popup = document.querySelector(".modal-login");
+			var close = popup.querySelector(".popup-close");
+
+			var form = popup.querySelector("form");
+			var login = popup.querySelector("[name=user-name]");
+			var email = popup.querySelector("[name=user-email]");
+			var text = popup.querySelector("[name=feedback-text]");
+
+			var isStorageSupport = true;
+			var storage = "";
+
+			try {
+				storage = localStorage.getItem("login");
+			}	catch (err) {
+				isStorageSupport = false;
+			}
+
+			link.addEventListener("click", function (evt) {
+				evt.preventDefault();
+				popup.classList.add("modal-show");
+
+				if (storage) {
+					login.value = storage;
+					email.focus();
+				}	else {
+					login.focus();
+				}
+			});
+
+			close.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				popup.classList.remove("modal-show");
+			});
+
+			form.addEventListener("submit", function(evt) {
+				if (!login.value || !email.value || !text.value) {
+					evt.preventDefault();
+					console.log("Нужно ввести логин и пароль");
+				} else {
+					if (isStorageSupport) {
+						localStorage.setItem("login", login.value);
+					}
+				}
+			});
+
+			window.addEventListener("keydown", function (evt) {
+				if (evt.keyCode === 27) {
+					evt.preventDefault();
+					if (popup.classList.contains ("modal-show")) {
+						popup.classList.remove("modal-show");
+					}
+				}
+			});
+		</script>
 	</body>
 </html>
